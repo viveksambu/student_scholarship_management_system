@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarMatch | Gateway to Your Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .landing-hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: fadeInUp 1s ease;
+        }
+        .landing-hero h1 {
+            font-size: 5.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+            font-weight: 800;
+        }
+        .landing-hero h1 span {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .landing-hero p {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cta-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6);
+        }
+        .cta-btn::after {
+            content: ''; position: absolute; top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .cta-btn:hover::after { opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <div class="app-container">
+        <header style="border-bottom: none;">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span>ScholarMatch</span>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <div class="nav-item">
+                    <a href="portal.html">Quick Navigators <i class="fa-solid fa-chevron-down" style="font-size:0.8rem; margin-left:4px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="portal.html?stream=Engineering">Engineering</a>
+                        <a href="portal.html?stream=Medical">Medical</a>
+                        <a href="portal.html?stream=Arts">Arts & Design</a>
+                        <a href="portal.html?stream=Pharmacy">Pharmacy</a>
+                        <a href="portal.html?stream=Commerce">Commerce</a>
+                        <a href="portal.html?stream=All">All Streams</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#">More Options <i class="fa-solid fa-chevron-down" style="font-size:0.8rem; margin-left:4px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#" onclick="alert('Founders:\nVivek Chaitanya & Sricharan\n\nWe built this portal to empower students and connect them with the best educational opportunities available!'); return false;">About Us</a>
+                        <a href="suggest.html">Suggest a Scholarship</a>
+                        <a href="submit_ad.html">Post an Ad</a>
+                        <a href="admin_login.php">Admin Login</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="landing-hero">
+            <div class="badge" style="margin-bottom: 2rem;">Funding your future ✨</div>
+            <h1>Discover Your <br><span>Perfect Scholarship</span></h1>
+            <p>Join over 15,000+ students who have unlocked their academic potential through India's most advanced scholarship matching platform.</p>
+            <a href="portal.html" class="cta-btn">Get Started Now <i class="fa-solid fa-arrow-right"></i></a>
+        </main>
+    </div>
+</body>
+</html>

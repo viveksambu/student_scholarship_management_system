@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest a Scholarship | ScholarMatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 3rem;
+            animation: fadeIn 0.5s ease;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+        }
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .submit-btn:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span>ScholarMatch</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portal.html">Portal</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-container glass-panel">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Suggest a Scholarship</h2>
+                <form action="submit_suggest.php" method="POST">
+                    <div class="form-group">
+                        <label>Scholarship Name</label>
+                        <input type="text" name="name" required placeholder="e.g. Merit Scholar Program">
+                    </div>
+                    <div class="form-group">
+                        <label>Provider Name</label>
+                        <input type="text" name="provider" required placeholder="e.g. XYZ Foundation">
+                    </div>
+                    <div class="form-group">
+                        <label>Scholarship Amount</label>
+                        <input type="text" name="amount" required placeholder="e.g. ₹50,000 / year">
+                    </div>
+                    <div class="form-group">
+                        <label>Relevant Stream</label>
+                        <select name="stream" required>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Arts">Arts & Design</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Law">Law</option>
+                            <option value="Study Abroad">Study Abroad</option>
+                            <option value="All">All Streams</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Application Deadline</label>
+                        <input type="date" name="deadline" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Application Link</label>
+                        <input type="url" name="apply_url" placeholder="e.g. https://www.provider.com/apply" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Short Description</label>
+                        <textarea name="description" rows="4" required placeholder="Provide some eligibility details..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit for Review</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

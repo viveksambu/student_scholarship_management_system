@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScholarMatch | Find Your Perfect Scholarship</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span>ScholarMatch</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <div class="nav-item">
+                    <a href="#" class="active">Quick Navigators <i class="fa-solid fa-chevron-down"
+                            style="font-size:0.8rem; margin-left:4px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#"
+                            onclick="document.querySelector('.category-card[data-stream=\'Engineering\']')?.click(); return false;">Engineering</a>
+                        <a href="#"
+                            onclick="document.querySelector('.category-card[data-stream=\'Medical\']')?.click(); return false;">Medical</a>
+                        <a href="#"
+                            onclick="document.querySelector('.category-card[data-stream=\'Arts\']')?.click(); return false;">Arts
+                            & Design</a>
+                        <a href="#"
+                            onclick="document.querySelector('.category-card[data-stream=\'Pharmacy\']')?.click(); return false;">Pharmacy</a>
+                        <a href="#"
+                            onclick="document.querySelector('.category-card[data-stream=\'Commerce\']')?.click(); return false;">Commerce</a>
+                        <a href="#"
+                            onclick="document.querySelector('.category-card[data-stream=\'All\']')?.click(); return false;">All
+                            Streams</a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#">More Options <i class="fa-solid fa-chevron-down"
+                            style="font-size:0.8rem; margin-left:4px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#"
+                            onclick="alert('Founders:\nVivek Chaitanya & Sricharan\n\nWe built this portal to empower students and connect them with the best educational opportunities available!'); return false;">About
+                            Us</a>
+                        <a href="suggest.html">Suggest a Scholarship</a>
+                        <a href="submit_ad.html">Post an Ad</a>
+                        <a href="admin_login.php">Admin Login</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="badge">Funding your future ✨</div>
+                <h1>Empowering Education Through <span>Scholarships</span></h1>
+                <p>Unlock thousands of scholarships tailored to your academic journey. Select your stream below to
+                    explore the greatest opportunities curated just for you.</p>
+
+                <!-- Sponsored Content -->
+                <div class="ad-container" id="dynamic-ad-container" style="margin: 2.5rem auto; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15); width: 100%; max-width: 900px; position: relative; border: 1px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; display: none; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(139, 92, 246, 0.25)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 35px rgba(139, 92, 246, 0.15)'">
+                    <span style="position: absolute; top: 12px; right: 12px; background: rgba(0, 0, 0, 0.4); color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; z-index: 10; backdrop-filter: blur(8px); letter-spacing: 0.5px; border: 1px solid rgba(255,255,255,0.1);">Advertisement</span>
+                    <a href="#" target="_blank" id="dynamic-ad-link" style="display: block;">
+                        <img src="" alt="Advertisement Banner" id="dynamic-ad-img" style="width: 100%; height: auto; display: block; max-height: 220px; object-fit: cover; border-radius: 24px;">
+                    </a>
+                </div>
+
+                <div class="section-divider">
+                    <h3>Explore by Category</h3>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Unique Category Grid -->
+                <div class="category-grid">
+                    <div class="category-card glass-panel" data-stream="Engineering">
+                        <div class="icon-circle"><i class="fa-solid fa-microchip"></i></div>
+                        <span>Engineering</span>
+                    </div>
+                    <div class="category-card glass-panel" data-stream="Medical">
+                        <div class="icon-circle"><i class="fa-solid fa-stethoscope"></i></div>
+                        <span>Medical</span>
+                    </div>
+                    <div class="category-card glass-panel" data-stream="Arts">
+                        <div class="icon-circle"><i class="fa-solid fa-palette"></i></div>
+                        <span>Arts & Design</span>
+                    </div>
+                    <div class="category-card glass-panel" data-stream="Pharmacy">
+                        <div class="icon-circle"><i class="fa-solid fa-pills"></i></div>
+                        <span>Pharmacy</span>
+                    </div>
+                    <div class="category-card glass-panel" data-stream="Study Abroad">
+                        <div class="icon-circle"><i class="fa-solid fa-plane-departure"></i></div>
+                        <span>Study Abroad</span>
+                    </div>
+                    <div class="category-card glass-panel" data-stream="Commerce">
+                        <div class="icon-circle"><i class="fa-solid fa-chart-pie"></i></div>
+                        <span>Commerce</span>
+                    </div>
+                    <div class="category-card glass-panel" data-stream="Law">
+                        <div class="icon-circle"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <span>Law</span>
+                    </div>
+                    <div class="category-card glass-panel" data-stream="All">
+                        <div class="icon-circle"><i class="fa-solid fa-border-all"></i></div>
+                        <span>All Streams</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section" id="results-section" style="display: none;">
+                <div class="results-header">
+                    <div class="results-title">
+                        <h2>Available Scholarships</h2>
+                        <div class="stream-badge" id="current-stream-badge">Engineering</div>
+                    </div>
+                    <span class="results-count" id="results-count">0 found</span>
+                </div>
+
+                <div class="loader-container" id="loader" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Searching database...</p>
+                </div>
+
+                <div class="scholarships-grid" id="scholarships-grid">
+                    <!-- Scholarship cards injected here -->
+                </div>
+
+                <div class="no-results glass-panel" id="no-results" style="display: none;">
+                    <div class="empty-icon"><i class="fa-solid fa-magnifying-glass-minus"></i></div>
+                    <h3>No scholarships found</h3>
+                    <p>We couldn't find any scholarships for this stream in our database.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scholarship Details Modal -->
+    <div id="scholarship-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Template for a scholarship card -->
+    <template id="scholarship-card-template">
+        <div class="scholarship-card glass-panel">
+            <div class="card-header">
+                <div class="provider-info">
+                    <div class="provider-avatar">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <span class="provider-name"></span>
+                </div>
+                <div class="amount-badge"></div>
+            </div>
+
+            <h3 class="scholarship-title"></h3>
+            <p class="scholarship-desc"></p>
+
+            <div class="card-footer">
+                <div class="deadline">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Deadline: <strong class="deadline-date"></strong></span>
+                </div>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="script_v2.js"></script>
+</body>
+
+</html>

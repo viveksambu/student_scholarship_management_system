@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post an Advertisement | ScholarMatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span>ScholarMatch</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portal.html">Quick Navigators</a>
+                <div class="nav-item">
+                    <a href="#" class="active">More Options <i class="fa-solid fa-chevron-down" style="font-size:0.8rem; margin-left:4px;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="suggest.html">Suggest a Scholarship</a>
+                        <a href="submit_ad.html">Post an Ad</a>
+                        <a href="admin_login.php">Admin Login</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main style="max-width: 800px; margin: 3rem auto; padding: 2rem;">
+            <div class="glass-panel" style="padding: 2.5rem; border-radius: 20px;">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);"><i class="fa-solid fa-bullhorn" style="color: var(--primary);"></i> Post an Advertisement</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Reach out to thousands of students by posting your banner ad on our portal. Your application will be reviewed by our admins.</p>
+                
+                <form action="submit_ad.php" method="POST" enctype="multipart/form-data" class="modern-form">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Company Name <span style="color: red;">*</span></label>
+                        <input type="text" name="company_name" required style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--text-primary); font-family: 'Inter', sans-serif;">
+                    </div>
+                    
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Target URL (Where the banner redirects) <span style="color: red;">*</span></label>
+                        <input type="url" name="target_url" placeholder="https://" required style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--text-primary); font-family: 'Inter', sans-serif;">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Start Date <span style="color: red;">*</span></label>
+                            <input type="date" name="start_date" required style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--text-primary); font-family: 'Inter', sans-serif;">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">End Date (Timeline) <span style="color: red;">*</span></label>
+                            <input type="date" name="end_date" required style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--text-primary); font-family: 'Inter', sans-serif;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Upload Banner Image <span style="color: red;">*</span></label>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.8rem; line-height: 1.4;">
+                            <strong>Recommended Dimensions:</strong> 900 x 220 pixels (approx. 4:1 Aspect Ratio).<br>
+                            <em>Note: Images will be automatically scaled to fit gracefully. Standard Leaderboard (728x90) and Billboard (970x250) sizes are also fully supported.</em>
+                        </p>
+                        <input type="file" name="banner_image" accept="image/*" required style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--text-primary); font-family: 'Inter', sans-serif;">
+                    </div>
+
+                    <button type="submit" class="apply-btn" style="width: 100%; padding: 1.2rem; font-size: 1.1rem; border: none;">Submit Advertisement</button>
+                    <style>
+                        /* Use same modern input focus styles if not in style.css */
+                        input:focus { outline: none; border-color: var(--primary) !important; box-shadow: 0 0 10px rgba(139, 92, 246, 0.3) !important; }
+                    </style>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
